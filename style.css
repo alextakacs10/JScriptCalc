@@ -46,7 +46,14 @@ span.operator {
 .head .screen {
     height: 40px;
     width: 212px;
+    padding: 0px 5px;
     float: right;
     background-color: #3C2120;
-    border-radius: 3px; 
+    border-radius: 3px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: right;
+    color: white;
+    overflow:hidden;
+    user-select: none;
 }
