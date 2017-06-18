@@ -17,13 +17,14 @@ body {
     height: auto;
     margin: 100px auto;
     padding: 20px 20px 9px;
-    background-color: #BC6662;
+    background-color: #51BC9A;
     border-radius: 3px;
 }
 
 .buttons, .head {
     overflow: hidden;
 }
+
 
 .buttons span, .head span.reset {
     width: 66px;
@@ -40,8 +41,22 @@ body {
     float: left;
 }
 
+.head span.reset {
+    background-color: #BC2621;
+    color: white;
+    width: 31px;
+    height: 40px;
+    margin: 0px 3.5px 11px 0px; 
+}
+
+span.eval {
+    background-color: #16891E;
+    color: white;
+}
+
 span.operator {
     margin-right: 0px;
+    background-color: rgba(255,255,255,0.7);
 }
 
 .head span.reset {
@@ -53,7 +68,7 @@ span.operator {
     width: 212px;
     padding: 0px 5px;
     float: right;
-    background-color: #3C2120;
+    background-color: #2C3C37;
     border-radius: 3px;
     line-height: 35px;
     text-align: right;
