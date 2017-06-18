@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#calc {
+    width: 325px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background-color: #BC6662;
+    border-radius: 3px;
+}
+
+.buttons, .head {
+    overflow: hidden;
+}
+
+.buttons span, .head span.reset {
+    width: 66px;
+    height: 40px;
+    background-color: white;
+    color: rgba(60,50,50,.8);
+    border-radius: 3px;
+    margin: 0px 7px 11px 0px; 
+    line-height:40px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    float: left;
+}
+
+span.operator {
+    margin-right: 0px;
+}
+
+.head span.reset {
+    float:left;
+}
+
+.head .result {
+    height: 40px;
+    width: 212px;
+    float: right;
+    background-color: #3C2120;
+    border-radius: 3px; 
+}
