@@ -11,6 +11,7 @@ for (var i = 0; i < buttons.length; i++) {
 
         if (buttonValue === 'C') {
             input.innerHTML = "";
+            decOn = false;
         }
         
         else if (buttonValue === "CE") {
@@ -20,10 +21,14 @@ for (var i = 0; i < buttons.length; i++) {
         else if (buttonValue === "=") {
             var toCalculate = inputValue;
             toCalculate = toCalculate.replace(/x/g,'*').replace(/÷/g,'/');
+            if (operators.indexOf(lastCharacter) > -1 || lastCharacter == ".") {
+                toCalculate = toCalculate.replace(/.$/, "");
+            }
 
             if (toCalculate) {
                 input.innerHTML = eval(toCalculate);
             }
+            decOn = false;
         }
         
         else if (operators.indexOf(buttonValue) > -1) {
@@ -35,10 +40,17 @@ for (var i = 0; i < buttons.length; i++) {
             }
 
             if (operators.indexOf(lastCharacter) > -1 && inputValue.length > 1) {
-                input.innerHTML = inputValue.replace(/.$/, buttonValue)
+                input.innerHTML = inputValue.replace(/.$/, buttonValue);
+            }
+            decOn = false;
+        }
+        else if (buttonValue === ".") {
+            if (decOn === false) {
+                input.innerHTML += buttonValue;
+                decOn = true;
             }
         }
-        
+
         else {
             input.innerHTML += buttonValue;
         }
