@@ -9,12 +9,12 @@ for (var i = 0; i < buttons.length; i++) {
         var buttonValue = this.innerHTML;
         var lastCharacter = inputValue[inputValue.length-1];
 
-        if (buttonValue === 'C') {
+        if (buttonValue === 'CE') {
             input.innerHTML = "";
             decOn = false;
         }
         
-        else if (buttonValue === "CE") {
+        else if (buttonValue === "C") {
             input.innerHTML = inputValue.replace(lastCharacter, "");
         }
         
